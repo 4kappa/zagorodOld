@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru" dir="1tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Grenze:wght@300;900&family=Sofia+Sans+Semi+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/menu-accordion.css">
+    <link type="image/x-icon" href="assets/images/tab.svg" rel="shortcut icon">
+    <title>Загородный дом</title>
+    <script src="https://kit.fontawesome.com/2f7bb8b74f.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <img src="assets/images/logo.svg" alt="">
+    <ul class="projects">
+        <li class="first">ПРОЕКТЫ ДОМОВ</li>
+        <li><a href="html/gazbet.html" class="underline-effect">Из газобетона</a></li>
+        <li><a href="#" class="underline-effect">Из кирпича</a></li>
+        <li><a href="#" class="underline-effect">Из керамических блоков</a></li>
+        <li><a href="#" class="underline-effect">Из дерева</a></li>
+        <li><a href="#" class="underline-effect">Комбинированные дома</a></li>
+    </ul>
+    <ul class="service">
+        <li class="first">УСЛУГИ</li>
+        <li><a href="#" class="underline-effect">Проектирование</a></li>
+        <li>  
+            <div class="faq">
+            <div class="faq-item">
+                <input class="faq-input" type="checkbox" id="faq_1">
+                <label class="faq-title" for="faq_1">Инженерные системы</label>
+                <div class="faq-text">
+                    <ul>
+                        <li><a href="#" class="underline-effect">Вентеляция и кондиционирование</a></li>
+                        <li><a href="#" class="underline-effect">Электроснабжение</a></li>
+                        <li><a href="#" class="underline-effect">Отопление</a></li>
+                        <li><a href="#" class="underline-effect">Водоснабжение</a></li>
+                        <li><a href="#" class="underline-effect">Канализация</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li><a href="#" class="underline-effect">Отделка</a></li>
+    </ul>
+    <ul class="about">
+        <li><a href="#">О КОМПАНИИ</a></li>
+        <li class="center1"><a href="#">ПОРТФОЛИО</a></li>
+        <li><a href="#">КОНТАКТЫ</a></li>
+    </ul>
+    <ul class="contacts">
+        <li class="telephone"><a href="#">+7 (495) 532-65-00</a> <i class="fa-solid fa-phone"></i></li>
+        <li class="email"><a href="#">info@zag-dom.ru</a> <i class="fa-solid fa-envelope"></i></li>
+        <li><a href="#order-call"><button class="call">Заказать звонок</button></a></li>
+    </ul>
+</nav>
+
+<!--  тонирование -->    
+<div class="css-modal-find" id="order-call">
+  <div class="cmt">
+    <form class="topBefore" id="form" action="assets/php/zayvka.php" method="POST">
+    <ul>
+      <li><h5>Заказать звонок</h5></li>
+      <li><h6>Заполните форму, чтобы мы связались с вами!</h6></li>
+      <ul class="zayvka-line">
+        <li><input id="name" name="user_name" type="text" placeholder="Ваше имя" required></li>
+        <li><input class="phone" id="phone" oninput="changeHandler(this)" name="user_phone" type="text" placeholder="Ваш телефон" required></li>
+        <li><input id="mail" name="user_email" type="email" autocomplete="on" placeholder="Ваш email" required></li>
+      </ul>
+      <li><textarea name="user_comment" cols="40" rows="3" placeholder="Комментарий"></textarea></li>
+      <ul class="button-order-call">
+        <li><a href="#"><button class="call">Заказать звонок</button></a></li>
+        <li><p>Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p></li>
+      </ul>
+    </ul>
+  </form>
+  </div>
+  <a href="#close" class="css-modal-close"></a>    
+</div>
+
+
+<section class="main" id="header">
+    <div class="itcss">
+        <div class="itcss__wrapper">
+          <div class="itcss__items">
+            <div class="itcss__item" id="gazbeton">
+              <div style="height: 900px; width: 100%;">
+                <ul>
+                    <li class="stroit">Строительство домов</li>
+                    <li class="feature">ИЗ ГАЗОБЕТОНА</li>
+                    <li class="cost">от 28 000 руб/м2</li>
+                    <li class="else"><a href="#"><button class="elseb">подробнее <i class="fa-solid fa-angle-right"></i></button></a></li>
+                </ul>
+            </div>
+           </div>
+            <div class="itcss__item" id="kirpich">
+                <div style="height: 900px; width: 100%;">
+                    <ul>
+                        <li class="stroit">Строительство домов</li>
+                        <li class="feature">ИЗ КИРПИЧА</li>
+                        <li class="cost">от 33 000 руб/м2</li>
+                        <li class="else"><a href="#"><button class="elseb">подробнее <i class="fa-solid fa-angle-right"></i></button></a></li>
+                    </ul>
+              </div>
+            </div>
+              <div class="itcss__item" id="keramich">
+                <div style="height: 900px; width: 100%;">
+                    <ul>
+                        <li class="stroit">Строительство домов</li>
+                        <li class="feature">ИЗ КЕРАМИЧЕСКИХ БЛОКОВ</li>
+                        <li class="cost">от 31 000 руб/м2</li>
+                        <li class="else"><a href="#"><button class="elseb">подробнее <i class="fa-solid fa-angle-right"></i></button></a></li>
+                    </ul>
+              </div>
+            </div>
+              <div class="itcss__item" id="wood">
+                <div style="height: 900px; width: 100%;">
+                    <ul>
+                        <li class="stroit">Строительство домов</li>
+                        <li class="feature">ИЗ ДЕРЕВА</li>
+                        <li class="cost">от 26 000 руб/м2</li>
+                        <li class="else"><a href="#"><button class="elseb">подробнее <i class="fa-solid fa-angle-right"></i></button></a></li>
+                    </ul>
+              </div>
+            </div>
+              <div class="itcss__item" id="combo">
+                <div style="height: 900px; width: 100%;">
+                    <ul>
+                        <li class="stroit">Строительство домов</li>
+                        <li class="feature">КОМБИНИРОВАННЫЕ</li>
+                        <li class="cost">от 27 000 руб/м2</li>
+                        <li class="else"><a href="#"><button class="elseb">подробнее <i class="fa-solid fa-angle-right"></i></button></a></li>
+                    </ul>
+              </div>
+            </div>
+            </div>
+        </div>
+        <button class="itcss__btn itcss__btn_prev" role="button" data-slide="prev"></button>
+        <button class="itcss__btn itcss__btn_next" role="button" data-slide="next"></button>
+      </div>
+    </div>
+    <div class="text-about">
+      <div class="text-about1">
+        <h3>УСПЕШНО РАБОТАЕМ С 1997 ГОДА</h3>
+      </div>
+      <div class="text-about2">
+        <p>Основное направление деятельности компании — строительство загородных домов и
+          коттеджей.
+          27 лет без «реорганизаций» и перерегистраций — большой срок. Главная причина стабильности компании
+          состоит в том, что мы всегда стремимся к взаимопониманию с Заказчиком, не уклоняемся от исправления
+          своих ошибок и стараемся сделать так, чтобы наша работа приносила радость людям.</p>
+      </div>
+    </div>
+    <div class="reweds">
+      <div class="rewerd">
+        <img src="assets/images/awerds/3.png" alt="">
+        <p>Награда</p>
+        <h3>ЕВРОПЕЙСКОЕ КАЧЕСТВО</h3>
+      </div>
+      <div class="rewerd">
+        <img src="assets/images/awerds/2.png" alt="">
+        <p>Награда</p>
+        <h3>ЛУЧШИЕ В ОРЕНБУРГЕ</h3>
+      </div>
+      <div class="rewerd">
+        <img src="assets/images/awerds/1.png" alt="">
+        <p>Награда</p>
+        <h3>ПРОФЕССИОНАЛ РОССИИ</h3>
+      </div>
+    </div>
+    <section class="key">
+      <div class="proectkey">
+        <h5>проектирование и строительство загородных домов "под ключ"</h5>
+        <img src="assets/images/bg/pic1.png" alt="">
+      </div>
+      <a href="#order-call"><button class="call">Заказать дом "под ключ"</button></a>
+      <p>Компания «Загородный дом» основана 27 лет назад. Основное направление деятельности компании — строительство загородных домов и коттеджей.
+         27 лет без «реорганизаций» и перерегистраций — большой срок. Главная причина стабильности компании состоит в том, что мы всегда стремимся
+          к взаимопониманию с Заказчиком, не уклоняемся от исправления своих ошибок и стараемся сделать так, чтобы наша работа приносила радость людям.
+      </p>
+      <p> Наша задача — максимально упростить для заказчика процесс индивидуального строительства. Мы выполняем полный цикл работ по проектированию
+         и строительству загородного дома, что позволяет заказчику иметь дело только с одним подрядчиком. Компания проектирует и строит деревянные
+          дома, каменные дома из пеноблоков и кирпича, комбинированные дома. Сотрудники проектного отдела помогут спроектировать ваш дом, инженеры 
+      </p>
+      <p> Собственно, именно это и означает — строительство дома под ключ. Не нужно никаких дополнительных хлопот, нервотрепки, 
+        потерь времени, поиска строительных бригад и специализированных организаций; за все этапы строительства отвечает один 
+        подрядчик — компания «Загородный дом». Проектирование и строительство домов под ключ с одним подрядчиком — это экономия сил, времени и денег. 
+      </p>
+    </section>
+    <section class="grids">
+      <div class="grid-tegs">
+        <h4 class="teg">популярные проекты</h4>
+        <ul class="tegs">
+          <li data-f="gazbeton" class="gazbeton-teg character" >газобетон <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="85.333" height="85.333" viewBox="0 0 64 64"><path d="M0 32v32h64V0H0v32zm14-16c0 11.3.1 12 2 12s2-.7 2-12V4h8v6c0 5.3.2 6 2 6s2-.7 2-6V4h8v8c0 7.3.2 8 2 8s2-.7 2-8V4h8v16c0 15.3.1 16 2 16s2-.7 2-16V4h6v56h-6V50c0-9.3-.1-10-2-10s-2 .7-2 10v10h-8V42c0-17.3-.1-18-2-18s-2 .7-2 18v18h-8V48c0-11.3-.1-12-2-12s-2 .7-2 12v12h-8v-6c0-5.3-.2-6-2-6s-2 .7-2 6v6H4V4h10v12z"/><path d="M26 26c0 5.3.2 6 2 6s2-.7 2-6-.2-6-2-6-2 .7-2 6zM14 36c0 3.3.3 4 2 4s2-.7 2-4-.3-4-2-4-2 .7-2 4z"/></svg></li>
+          <li data-f="kerpich" class="kirpich-teg character">кирпич <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="101.333" height="85.333" viewBox="0 0 76 64"><path d="M0 32v32h76V0H0v32zm36-20v8H4V4h32v8zm36 0v8H40V4h32v8zM28 32v8H4V24h24v8zm44 0v8H32V24h40v8zM48 52v8H4V44h44v8zm24 0v8H52V44h20v8z"/></svg></li>
+          <li data-f="kiramika" class="keramich-teg character">керамические блоки <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="90.667" height="90.667" viewBox="0 0 68 68"><path d="M0 34v34h68V0H0v34zM11 5.5c1.5 1.8 1 4.5-1.2 5.9C6.3 13.6 2.4 8.7 5 5.5c1.6-1.9 4.4-1.9 6 0zm41.2 1.9c-.6 4.9 3.5 9 8.4 8.4l3.4-.4v37.2l-3.4-.4c-4.9-.6-9 3.5-8.4 8.4l.4 3.4H15.4l.4-3.4c.6-4.9-3.5-9-8.4-8.4l-3.4.4V15.4l3.4.4c4.9.6 9-3.5 8.4-8.4L15.4 4h37.2l-.4 3.4zM63 5.5c2.6 3.2-1.3 8.1-4.7 5.9C56 10 55.5 7.3 57 5.5c1.6-1.9 4.4-1.9 6 0zm-52 52c2.6 3.2-1.3 8.1-4.7 5.9-1-.6-1.9-1.9-2.1-2.8-.8-3.8 4.3-6.1 6.8-3.1zm52 0c2.6 3.2-1.3 8.1-4.7 5.9-1-.6-1.9-1.9-2.1-2.8-.8-3.8 4.3-6.1 6.8-3.1z"/><path d="M16 34v18h36V16H16v18zm18-9v5H20V20h14v5zm14 0v5H38V20h10v5zM34 41v7H20V34h14v7zm14 0v7H38V34h10v7z"/></svg></li>
+          <li data-f="wood" class="wood-teg character">дерево <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="90.667" height="85.333" viewBox="0 0 68 64"><path d="M0 32v32h68V0H0v32zm14-18c0 9.3.1 10 2 10s2-.7 2-10V4h8v6c0 5.3.2 6 2 6s2-.7 2-6V4h8v56h-8V48c0-11.3-.1-12-2-12s-2 .7-2 12v12h-8v-8c0-7.3-.2-8-2-8s-2 .7-2 8v8H4V4h10v10zm46.3-8.8c-.5.7-3.7 4.8-7.1 9-6.5 8.1-7.1 9.2-4.7 10.1.9.4 3.7-2.2 8.2-8l6.8-8.5.3 8.8.3 8.7-4.6 4.7c-3.5 3.6-4.3 4.8-3.3 5.8.9.9 1.9.5 4.5-2l3.3-3.2v8c0 6.8-.4 8.5-2.5 11.6-1.4 2-2.5 4.1-2.5 4.6 0 1.8 2.9 2.1 3.9.4.9-1.4 1-1.1 1.1 1.5V60H45.9l4.7-6.1c2.6-3.3 5.2-6.2 5.6-6.5 1.3-.8.9-3.1-.7-3.7-.9-.4-3.5 2-7.5 7l-6 7.6v-6.9c0-6.3.3-7.4 3.5-12.1 3.9-5.8 4.2-6.8 2.1-7.6-.9-.4-2.3.6-3.5 2.6L42 37.5V4h9.6c7.6 0 9.4.3 8.7 1.2z"/><path d="M26 24c0 3.3.3 4 2 4s2-.7 2-4-.3-4-2-4-2 .7-2 4zM14 36c0 3.3.3 4 2 4s2-.7 2-4-.3-4-2-4-2 .7-2 4z"/></svg></li>
+          <li data-f="combo" class="combo-teg character">комбинированные дома <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="85.333" height="85.333" viewBox="0 0 64 64"><path d="M0 32v32h64V0H0v32zM20.2 9.3c-4.4 4.4-5.1 5.6-3.9 6.5 1.1 1 2.6-.1 7.7-5.3l6.2-6.6 13.4.3 13.3.3-15 16.8C33.7 30.5 27 38.5 27 38.9c0 .5.6 1.1 1.4 1.4 1 .4 6.5-5.1 16.3-16.1L59.5 7.6l.3 9.2.3 9.3-4.6 5.9c-4.9 6.3-5.3 7.5-3 8.3.9.4 2.5-.9 4.5-3.5l3-4.2V60h-9.4l3.4-3.5c2.6-2.7 3.1-3.8 2.2-4.7-.9-.9-2.1-.3-5.2 2.7-2.1 2.1-3.7 4.2-3.4 4.7.3.4-3.4.8-8.2.8h-8.8l3.4-3.5c2.6-2.7 3.1-3.8 2.2-4.7-.9-.9-2.1-.3-5.2 2.7-2.1 2.1-3.7 4.2-3.4 4.7.3.4-3.4.8-8.2.8h-8.8l3.4-3.5c2.6-2.7 3.1-3.8 2.2-4.7-.9-.9-2.3-.2-6 3.5C7.6 57.9 5.1 60 4.7 60c-.4 0-.7-4.5-.7-10.1 0-5.5.4-9.8.8-9.5.5.3 2.6-1.3 4.7-3.4 3-3.1 3.6-4.3 2.7-5.2-.9-.9-2-.4-4.7 2.2L4 37.4V4h21.4l-5.2 5.3z"/></svg></li>
+        </ul>
+      </div>
+      <div class="grid gazbeton">
+        <div class="grid1">
+            <img src="assets/images/grid/gaz/1.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>романтизм с террасой</h4></li>
+              <li><h4 class="cost">6 547 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 204.7 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 15.3х15.1 м</h4></li>
+            </ul>
+        </div>
+        <div class="grid1">
+            <img src="assets/images/grid/gaz/2.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>никоновское</h4></li>
+              <li><h4 class="cost">9 156 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 301.1 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 18.7х14.4 м</h4></li>
+            </ul>
+        </div>
+        <div class="grid1">
+            <img src="assets/images/grid/gaz/3.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>ликино</h4></li>
+              <li><h4 class="cost">9 419 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 314.8 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 20.5х15.5 м</h4></li>
+            </ul>
+        </div>
+        <div class="grid1">
+            <img src="assets/images/grid/gaz/4.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>покровское</h4></li>
+              <li><h4 class="cost">9 847 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 335.2 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 20.9х18.1 м</h4></li>
+            </ul>
+        </div>
+      </div>
+      <div class="grid kerpich hide">
+        <div class="grid1">
+            <img src="assets/images/grid/kir/1.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>есипово</h4></li>
+              <li><h4 class="cost">15 898 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 477.7 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 37.7х16 м</h4></li>
+            </ul>
+        </div>
+        <div class="grid1">
+            <img src="assets/images/grid/kir/2.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>арт-деко-5</h4></li>
+              <li><h4 class="cost">11 041 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 322.7 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 18.3х22.4 м</h4></li>
+            </ul>
+        </div>
+        <div class="grid1">
+            <img src="assets/images/grid/kir/3.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>неоренессанс</h4></li>
+              <li><h4 class="cost">10 310 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 292.5 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 14.5х14.4 м</h4></li>
+            </ul>
+        </div>
+        <div class="grid1">
+            <img src="assets/images/grid/kir/4.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>модерн</h4></li>
+              <li><h4 class="cost">7 608 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 226.1 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 14.8х12.4 м</h4></li>
+            </ul>
+        </div>
+      </div>
+      <div class="grid kiramika hide">
+        <div class="grid1">
+            <img src="assets/images/grid/ker/1.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>арт-деко-3</h4></li>
+              <li><h4 class="cost">9 960 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 285.8 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 17.1х16.3 м</h4></li>
+            </ul>
+        </div>
+        <div class="grid1">
+            <img src="assets/images/grid/ker/2.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>минимализм-2</h4></li>
+              <li><h4 class="cost">11 041 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 366.1 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 19.3х17.3 м</h4></li>
+            </ul>
+        </div>
+        <div class="grid1">
+            <img src="assets/images/grid/ker/3.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>ямское</h4></li>
+              <li><h4 class="cost">13 740 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 421.5 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 26.3х16.1 м</h4></li>
+            </ul>
+        </div>
+        <div class="grid1">
+            <img src="assets/images/grid/ker/4.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>бостон</h4></li>
+              <li><h4 class="cost">6 658 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 192 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 15.4х11.1 м</h4></li>
+            </ul>
+        </div>
+      </div>
+      <div class="grid wood hide">
+        <div class="grid1">
+            <img src="assets/images/grid/wood/1.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>суоми</h4></li>
+              <li><h4 class="cost">5 578 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 198.6 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 13х12.9 м</h4></li>
+            </ul>
+        </div>
+        <div class="grid1">
+            <img src="assets/images/grid/wood/2.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>аллегро</h4></li>
+              <li><h4 class="cost">5 554 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 197.7 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 14.1х13 м</h4></li>
+            </ul>
+        </div>
+        <div class="grid1">
+            <img src="assets/images/grid/wood/3.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>альпийский</h4></li>
+              <li><h4 class="cost">4 712 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 168.4 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 10.4х11.5 м</h4></li>
+            </ul>
+        </div>
+        <div class="grid1">
+            <img src="assets/images/grid/wood/4.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>зеленогорск</h4></li>
+              <li><h4 class="cost">4 801 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 165 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 10.4х10.8 м</h4></li>
+            </ul>
+        </div>
+      </div>
+      <div class="grid combo hide">
+        <div class="grid1">
+            <img src="assets/images/grid/combo/1.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>вестфолл</h4></li>
+              <li><h4 class="cost">6 847 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 224.5 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 14.9х14.6 м</h4></li>
+            </ul>
+        </div>
+        <div class="grid1">
+            <img src="assets/images/grid/combo/2.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>альпийский</h4></li>
+              <li><h4 class="cost">3 839 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 165.5 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 11.7х10.6 м</h4></li>
+            </ul>
+        </div>
+        <div class="grid1">
+            <img src="assets/images/grid/combo/3.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>бужарово-2</h4></li>
+              <li><h4 class="cost">3 975 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 164.9 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 13.3х9.9 м</h4></li>
+            </ul>
+        </div>
+        <div class="grid1">
+            <img src="assets/images/grid/combo/4.jpg" alt="">
+            <ul class="name-cost">
+              <li><h4>пестово</h4></li>
+              <li><h4 class="cost">3 765 000 Р</h4></li>
+            </ul>
+            <ul class="size">
+              <li><h4>Общая площадь: 160.9 м²</h4></li>
+              <li><h4 class="sizes">Размеры: 9.5х12.3 м</h4></li>
+            </ul>
+        </div>
+      </div>
+    </section>
+    <section class="add">
+      <h3>планируете</h3>
+      <div class="blocks">
+        <div class="right">
+          <h4>строительство дома ?</h4>
+          <p>Мы готовы помочь вам с оценкой и выбором оптимальной конфигурации вашего проекта. 
+            Для этого заполните простую форму, и мы свяжемся с вами сегодня и ответим на все вопросы.
+          </p>
+          <a href="#"><button class="knowelse">готовые проекты</button></a>
+        </div>
+        <div class="left">
+          <h4>Загородный дом в кредит ?</h4>
+          <p>Мы предоставляем выгодные условия кредитования на загородное строительство.</p>
+          <a href="#"><button class="knowelse">узнать больше</button></a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="underline"></div>
+      <ul class="tree">
+        <li>
+            <ul class="firstul">
+              <li class="fr1">Каталог проектов</li>
+              <li><a href="#">из газобетона</a></li>
+              <li><a href="#">из кирпича</a></li>
+              <li><a href="#">из керамических блоков</a></li>
+              <li><a href="#">из дерева</a></li>
+              <li><a href="#">комбинированные дома</a></li>
+            </ul>
+        </li>
+        <li>
+          <ul class="secondul">
+            <li class="fr1">услуги</li>
+            <li><a href="#">проектирование загородных домов</a></li>
+            <li><a href="#">Вентеляция и кондиционирование</a></li>
+            <li><a href="#">Электроснабжение</a></li>
+            <li><a href="#">Отопление</a></li>
+            <li><a href="#">Водоснабжение</a></li>
+            <li><a href="#">Канализация</a></li>
+            <li><a href="#">Отделка загородного дома</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul class="thirdul">
+            <li><a href="#">о компании</a></li>
+            <li><a href="#">статьи</a></li>
+            <li><a href="#">ПОРТФОЛИО</a></li>
+            <li><a href="#">кредитование</a></li>
+            <li><a href="#">Награды</a></li>
+            <li><a href="#">faq</a></li>
+            <li><a href="#">карта сайта</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="allfoot">
+        <ul class="contacts">
+          <li><a href="#"><i class="fa-solid fa-house"></i> ОРЕНБУРГ, УЛ. ЧКАЛОВА 11</a></li>
+          <li><a href="#"><i class="fa-solid fa-phone"></i> +7 (908) 320-13-00</a></li>
+          <li><a href="#"><i class="fa-solid fa-envelope"></i> info@zag-dom.ru</a></li>
+        </ul>
+      </div>
+    </footer>
+</section>
+
+</body>
+</html>
+
+<script>
+  new ItcAccordion(document.querySelector('.accordion'), {
+    alwaysOpen: false
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    new ItcSimpleSlider('.itcss', {
+      loop: true,
+      autoplay: true,
+      swipe: true
+    });
+  });
+</script>
+
+<script src="assets/js/slide.js"></script>
+<script src="assets/js/calc.js"></script>
+<script src="assets/js/category.js" defer></script>
